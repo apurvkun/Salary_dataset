@@ -23,12 +23,6 @@ df['Company Name'].fillna(mode_company_name, inplace=True)
 print("Null values after imputation:")
 print(df.isnull().sum())
 
-df = pd.read_csv('/content/Salary_Data.csv')
-
-
-
-df = pd.read_csv('/content/Salary_Data.csv')
-
 for col in df.columns:
     if df[col].isnull().any():
         if df[col].dtype == 'object':  # Categorical column
