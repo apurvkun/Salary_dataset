@@ -17,12 +17,6 @@ df.info()
 
 df.isnull().sum()
 
-mode_company_name = df['Company Name'].mode()[0]
-df['Company Name'].fillna(mode_company_name, inplace=True)
-
-print("Null values after imputation:")
-print(df.isnull().sum())
-
 for col in df.columns:
     if df[col].isnull().any():
         if df[col].dtype == 'object':  # Categorical column
